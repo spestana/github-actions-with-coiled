@@ -15,8 +15,7 @@ cluster = coiled.Cluster(
     name=f"github-actions-{GITHUB_RUN_ID}",
     n_workers=10,
     worker_memory="8Gib",
-    package_sync=True,
-    account="geosmart",
+    workspace="geosmart",
 )
 
 client = Client(cluster)
