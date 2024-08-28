@@ -1,13 +1,13 @@
 name: Quickstart
 
-on:
-  push:
-    branches: main
-  pull_request:
-   branches: main
-  schedule:
-    # run at noon every day
-    - cron: "*/5 * * * *"
+on: workflow_dispatch
+  #push:
+  #  branches: main
+  #pull_request:
+  # branches: main
+  #schedule:
+  #  # run at noon every day
+  #  - cron: "*/ * * * *"
 
 defaults:
   # Required shell entrypoint to have properly activated conda environments
