@@ -21,15 +21,15 @@ cluster = coiled.Cluster(
 
 client = Client(cluster)
 
-ddf = dd.read_parquet(
-    "s3://coiled-datasets/nyc-tlc/2019",
-    columns=["passenger_count", "tip_amount"],
-    storage_options={"anon": True},
-).persist()
+#ddf = dd.read_parquet(
+#    "s3://coiled-datasets/nyc-tlc/2019",
+#    columns=["passenger_count", "tip_amount"],
+#    storage_options={"anon": True},
+#).persist()
 
 # perform groupby aggregation
-result = ddf.groupby("passenger_count").tip_amount.mean()
-result = result.to_frame()
+#result = ddf.groupby("passenger_count").tip_amount.mean()
+#result = result.to_frame()
 
 # write result to s3
 #bucket_path = (
@@ -38,7 +38,7 @@ result = result.to_frame()
 #result.to_parquet(
 #    bucket_path,
 #)
-print(f"The result was successfully written to {bucket_path}")
+print("hello world!")
 
 
 client.close()
